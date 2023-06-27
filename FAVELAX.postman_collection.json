@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "e579c79b-a062-4f43-bd12-48a2b40ea635",
+		"name": "FAVELAX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "655958"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register?name=user_2 test&email=user2test@testemail.com&password=123456789&level=default",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "user_2 test"
+						},
+						{
+							"key": "email",
+							"value": "user2test@testemail.com"
+						},
+						{
+							"key": "password",
+							"value": "123456789"
+						},
+						{
+							"key": "level",
+							"value": "default"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show records",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjNhOGZiOTExNDZjNDZhNjYyMThlNzg0ZTkzZmE0MGFjNDg0YmQ5MTY4ZGZmNjU4YWIxNjAxM2I5MzJkMjFlMWNhMWMxNTExNjIxNmRiM2YiLCJpYXQiOjE2ODc4NzQ1MjguNjE4MTYzLCJuYmYiOjE2ODc4NzQ1MjguNjE4MTcxLCJleHAiOjE3MTk0OTY5MjguNDkwODk2LCJzdWIiOiI0Iiwic2NvcGVzIjpbXX0.I19V5ZQHlPSr-fvaX88JQBpNWjHPu8EawjSc7NCQB4043uvZQVpmVv1bvk14hELcqxBw-bOxfpSomGhrOxNn_9d_S_cZW-TjgEMiXpzQwAGWetFjrN4VCdJTNbAlXhDmf4lFvrSPcViBjguMJmVYo39cR3f01RNCpb-who7nGGryiWU6PJb37KmxDhxuhFbnHHaCi-eFmGnuWZQi4tAryOiUuPIzK_6HbunJdt5gcJECleJj9FjRrLvenTS5qrkVESITL-S2w37MJBhDbFbu8jviLDkrQltxUuKE2-hiLhBDiukpfGhLAFf1lZntT8UwSvJbvqLWsqk5gdRZXthBPS9cYYWsM_EZlme7AV1aTYMZ0k-dDxHOrpBdQlnUmzXh5f6yixfdshIzXev4KM0uB-V1auS4T8BwsjW2e2hovTJewtj6Wfi5tenFlHLc0BU8qGne_1v3xO77UZnVr0qxuupgH6UPTkggTUdLAXyBqtxlKs7ZHkyO6d0w9ZlpKFUqaj_23gqdQnckLYopxJUETau9kueT1OzyGUD_X2xM-xFNL8GB0nGz0Nzj1--miXEW5l-e2Zn9XRHagGRw48b1HWik_5RMyY5xQJLpKFW_uVmtUO5lRuwk2Uqua6kqlzOvC1wJ_w1B2B7G8SNZow43eVREmzDQyKueRcJJu6qp108",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/records",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login?email=financialdelete@testemail.com&password=123456789",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "financialdelete@testemail.com"
+						},
+						{
+							"key": "password",
+							"value": "123456789"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiOWZlZjhjYWQ1NDUzNDhkNDQ5ZWYwNmU0ZDQ2YTAyMGM2MDQ2MzZkN2IxMjhlODgzNmIyNDA0MzgwM2YzNzUwZmZkZDFmYjFhZjkyYTJkYjAiLCJpYXQiOjE2ODc4NzUxMzEuNzU2MzE2LCJuYmYiOjE2ODc4NzUxMzEuNzU2MzI3LCJleHAiOjE3MTk0OTc1MzEuNzMwMjAxLCJzdWIiOiI1Iiwic2NvcGVzIjpbXX0.ZHVwRFiFiHMytJ_wacgSZkSDSQEFwosavKM4itw_v47iDzLm0u9gc7Xiq-Wj6yg99JZ0ghN64VsrQJkPYSDiXD-LdtcyyIsZKwfvGiF1fVzxFBCsa8HGDFHobG4gWQl91RmdvQFgA2JaP0h8FkIY0NsCUCMs_zhgzz0dVLP08mOxPPq_4CxZyai1ETVhTVubgkdib0f6OppsyqZBlbC96vGgMMMaEudZpXCMhIwyDQrJxnRlGsD4rN1twQmma_YcYJNzupOcO4G87g9ZwxY2Ns5W1SkV2Z8ysYv1QtLpLCpaD9D-yqkYbueAlgW89zFfCw8JrpsMf7g3XQRcvxfbU4AkYDgRYXjcXVyCvRYP0gJJqFWyM1-lH7vHg6bDEge_73XB90o2EAUGQOukqu2rJ6OTcl0i9R0sLX1a8H_7iU46GrmBANZticMsy9gEs3hMHgQjvUvSMdrZsjcuswwKWEIs3c-S-uOMTaPWPCcJ7TiYykvGHT0urtJX6KT49mEJKqZZjBx_5CYHhTmn0iZR8iRrsP6Rd6mDCtmlmBVp_TbimTToP6trI9T0NzNn2xQRxq4Hq0yD3Y4pUQaLShxhtyAU842L4wem-cwRzEiVXSjFEKUAGDRCsz_adh7nHoNk7fUaCeur1ONHt04kb4NVIhuOR0sT_GjrrLqLy5n_t24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/records/update/1?name=user modificated by financial",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"records",
+						"update",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "user modificated by financial"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Store record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiN2FjZTc0ZjZmOWY5MGQ0MTFhZGNlMTVmYTQ2YjEwMmE5MjUxMDhjOTBkOTYxMTM1ZjRiNjJkOTAzODgzMjJmYTczNzYyZTMzZGI5ZGU3NzUiLCJpYXQiOjE2ODc4NzM3MDAuNzEwNDYsIm5iZiI6MTY4Nzg3MzcwMC43MTA0NjYsImV4cCI6MTcxOTQ5NjEwMC42ODAzMjgsInN1YiI6IjEiLCJzY29wZXMiOltdfQ.BiBwIgO-1EZ7Novm5dHkPwyW8aJ5BRUrKU6cFX8N-leNaH2BZFQ4vxxeesqmkPey4wCOWjX1qRKVx6ozgR0KbC4QINQOG2tzSZUh_7Umn8foSkNkHzm4ImjzmhfB_K3B2pqsc9wfS0C8F5X1EgOQopnIVjHHetLzsWvOT0odqAvVJQx16W4Q9CqJgfv166E0Tz6bL4qbyG8DWtl8dtefn0NlC5m_fcTEaQJLaWvZuWG5ZBhF9ZuALYJ8V76OMFIEFuITmzFYvlkyQ3PPDxseZHq3HkgKFkpWLHFmPyKOIM-R23_3rPuzvZLWw_PMTJ1Kyn3FKVdkdfDxazSIFMxBT2pULgXleBNRQgD1I9mMZJpz8wwn_Z2J1TQEWbOlgNBR2umHuUl5h79MzfKDz7awCnf5ychA11amctq3eKx2D3yUp3lvgFZK5fCtdnJWPxXgfCC3qH1N6vEojl8YwH7q5fKlE1V6AVOtWh-vWV0MN3FPKS2dPBoPXgGPs3lQ2eumO1ZY9AH5LkddQwY9We6Hm2wlMOonkRM00ZyOQqUxfMt4bOHHwaLip8No5DG5TKSURaOHW0jBDv-Dbvu_Dglkpqgri1esEiCzsus2w4JsNYC2q9F9uZSjCOonnPCmwBMksduOzDkXXY2_nWgUpegAsJqE5aTpiy5XGxjM9rvmJ58",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/records/store?name=user financial delete&email=financialdelete@testemail.com&password=123456789&level=financial_delete",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"records",
+						"store"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "user financial delete"
+						},
+						{
+							"key": "email",
+							"value": "financialdelete@testemail.com"
+						},
+						{
+							"key": "password",
+							"value": "123456789"
+						},
+						{
+							"key": "level",
+							"value": "financial_delete"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete record",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMjA3OTc5MmU2YTBhYjgyOGU0YmY2OTkxZjBkYjVkMjgzOTk0ZjBiMjYyZmM3ZGRhOGEzMjI4NDdmMmI4NmExNjIxNjk5NWZmZGNkMmJiMzYiLCJpYXQiOjE2ODc4NzUyNTUuNzQ2Nzk0LCJuYmYiOjE2ODc4NzUyNTUuNzQ2Nzk3LCJleHAiOjE3MTk0OTc2NTUuNzEyMjQ0LCJzdWIiOiI2Iiwic2NvcGVzIjpbXX0.qLD_nERRtgHejlMkgqZmp93BQwnZm7O56wmtwYnPicEzQ8pSDEWaqd4t8xoNSJRYEqlGS3axfp2_pujerruMtNJ22oaELGZqLrmdnTDkdP-V3ErrJxnAKkwhpFZC3mD1V_g1UIdgd_1m7UPp37HaetOzsJk-iVhaivV4WqGJuS52Y-MpAcil-k1zSPQb917n7X2T3FdvDYQSRhYhlDu78zPu-uqJyJgPd7A571kJRZ61KFBsF9s8oINyjsI362S7j4l_jgF_ahQZg8HVD7wo6SSkAg0lhFDnlP48zSFFUEHq-3JbO9iErLdfCCMYDtrnyz8it3unHupgFfsaLrFbQyPz9kGhZn8bJf8L6AHekdtq4p2U08LK061oQnivXdSj62K2dAQfGXvaU_dv6t2tQAhlmqYlQQuaVY5GI5LVjzX-JjcNo2FLI09hTdeGd1T7EhP7GflViiLP-7L7WBQ3oITAmrk_hZVZ_6m8YMoBGGMxTUpYDJhh-vqu25aScGpiZTEgxtPedgeqmfABParSeMD7O5Eca_jQCC307K3am2WWQ801pktD2hQ5ElE9zn6eobUoiLeo_aZQKgfBtCCDHayOFTrQVk7uChPx_xDWvV3Rb_gcQ-KC0jo3XpYH_xPYbx5H48J1s0OVDD5p4MI2qq6zHXexVW4E7SYdyhODrvw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/records/delete/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"records",
+						"delete",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
